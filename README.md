@@ -2,10 +2,10 @@
 
 This is a sinatra web application created to keep track of your workouts, by adding:
 
-Exercises
-Minutes
-Water Intake
-Date
+- Exercises
+- Minutes
+- Water Intake
+- Date
 
 ## Usage
 
