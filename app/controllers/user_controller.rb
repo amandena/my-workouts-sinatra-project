@@ -1,5 +1,5 @@
 class UserController < ApplicationController
- get '/users' do
-
+ get '/signup' do
+   
  end
 end
