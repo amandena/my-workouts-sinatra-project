@@ -14,9 +14,21 @@
   <link rel="stylesheet" href="/stylesheets/main.css" />
 </head>
 <body>
-  <div class="wrapper">
+  <nav>
+    <% if logged_in %>
+      <a href="/logout">Log Out</a>
 
-      <%= yield %>
+      <h1>My Workouts</h1>
+      <h3>Welcome, <%= current_user.email %>!</h3>
+    <% else %>
+      <a href="/signup">Sign Up</a>
+      <a href="/login">Log In</a>
+    <% end %>
+  </nav>
+
+  <div class="wrapper">
+    <h1>My Workouts</h1>  
+    <%= yield %>
 
   </div>
 
