@@ -19,7 +19,7 @@
       <a href="/logout">Log Out</a>
 
       <h1>My Workouts</h1>
-      <h3>Welcome, <%= current_user.email %>!</h3>
+      <h3>Welcome, <%= current_user.create_username %>!</h3>
     <% else %>
       <a href="/signup">Sign Up</a>
       <a href="/login">Log In</a>
@@ -27,7 +27,7 @@
   </nav>
 
   <div class="wrapper">
-    <h1>My Workouts</h1>  
+    <h1>My Workouts</h1>
     <%= yield %>
 
   </div>

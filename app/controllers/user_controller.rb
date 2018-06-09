@@ -42,4 +42,9 @@ class UserController < ApplicationController
      redirect '/'
    end
  end
+
+ get '/users/:username' do
+   @user = User.find_by_username(params[:username])
+   erb :'/users/show'
+ end
 end
