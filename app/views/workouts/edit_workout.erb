@@ -1,0 +1,14 @@
+<h2>Edit A Workout</h2>
+<form action="/workouts/<%= @workout.id %>" method="post">
+<input type="hidden" name="_method" value="patch">
+  <label>Date: </label>
+  <input type="text" name="date" value="<%= @workout.date %>"><br><br>
+  <label>Exercise: </label>
+  <input type="text" name="exercise_name" value="<%= @workout.exercise_name %>"><br><br>
+  <label>Minutes: </label>
+  <input type="number" name="minutes" value="<%= @workout.minutes %>"><br><br>
+  <label>Water: </label>
+  <input type="number" name="water_intake" value="<%= @workout.water_intake %>"> fl ounces<br><br>
+
+  <input type="submit" value="Edit Workout">
+</form>
