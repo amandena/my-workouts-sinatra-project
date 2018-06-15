@@ -2,3 +2,8 @@
 <p>Exercise: <%= @workout.exercise_name %></p>
 <p>Minutes: <%= @workout.minutes %></p>
 <p>Water: <%= @workout.water_intake %>fl ounces</p>
+
+<form action="/workouts/<%= @workout.id %>/delete" method="post">
+<input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Workout">  
+</form>
