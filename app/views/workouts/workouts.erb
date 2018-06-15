@@ -3,4 +3,8 @@
   <p>Exercise: <%= workout.exercise_name %></p>
   <p>Minutes: <%= workout.minutes %></p>
   <p>Water: <%= workout.water_intake %> fl ounces</p>
+
+  <a href="/workouts/<%= workout.id %>/edit">Edit Workout</a>
+  <a href="/workouts/<%= workout.id %>/delete %>">Delete Workout</a>
+  <br><br>
 <% end %>
