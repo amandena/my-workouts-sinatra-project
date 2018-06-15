@@ -27,4 +27,13 @@ class WorkoutController < ApplicationController
       redirect '/login'
     end
   end
+
+  get '/workouts/:id' do
+    if logged_in
+      @workout = Workout.find_by_id(params[:id])
+      erb :'/workouts/show_workout'
+    else
+      redirect '/login'
+    end
+  end
 end
