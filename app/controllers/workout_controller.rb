@@ -18,7 +18,8 @@ class WorkoutController < ApplicationController
 
   post '/workouts' do
     if logged_in
-      if @workout = current_user.workouts.create(params)
+      @workout = current_user.workouts.create(params)
+      if params[:exercise_name] != "" && params[:minutes] != "" && params[:water_intake] != "" && params[:date] != ""
         redirect "/workouts/#{@workout.id}"
       else
         redirect '/workouts/new'
@@ -72,6 +73,6 @@ class WorkoutController < ApplicationController
       redirect '/workouts'
     else
       redirect '/login'
-    end  
+    end
   end
 end
