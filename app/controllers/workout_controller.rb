@@ -22,7 +22,7 @@ class WorkoutController < ApplicationController
       if @workout.valid?
         redirect "/workouts/#{@workout.id}"
       else
-        redirect '/workouts/new'
+        erb :'/workouts/create_workout'
       end
     else
       redirect '/login'

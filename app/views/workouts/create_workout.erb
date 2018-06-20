@@ -1,4 +1,7 @@
 <h2>Add A Workout</h2>
+
+<%= "*Must fill out all fields" if @workout && @workout.errors.any? %><br><br>
+
 <form action="/workouts" method="post">
   <label>Date: </label>
   <input type="date" name="date"><br><br>
