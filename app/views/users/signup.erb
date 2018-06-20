@@ -1,5 +1,7 @@
 <h3>Please Fill Out All Fields:</h3>
 
+<%= "*Must fill out email and password fields" if @user && @user.errors.any? %><br><br>
+
 <form action="/signup" method="post">
   <label>Email: </label>
   <input type="email" name="email"><br><br>

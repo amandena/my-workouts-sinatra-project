@@ -13,7 +13,7 @@ class UserController < ApplicationController
       session[:user_id] = @user.id
       redirect '/workouts'
    else
-     redirect '/signup'
+     erb :'/users/signup'
    end
  end
 
@@ -31,7 +31,7 @@ class UserController < ApplicationController
      session[:user_id] = @user.id
      redirect '/workouts'
    else
-     redirect '/signup'
+     redirect '/login'
    end
  end
 
