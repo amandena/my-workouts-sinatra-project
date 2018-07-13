@@ -15,4 +15,11 @@ class User < ActiveRecord::Base
   def self.find_by_username(username)
     self.all.find {|email| email.create_username == username}
   end
+  
+  def total_minutes
+    self.workouts.collect do |workout|
+      minutes = workout.minutes
+      minutes
+    end.reduce(:+)
+  end
 end
