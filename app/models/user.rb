@@ -18,8 +18,7 @@ class User < ActiveRecord::Base
   
   def total_minutes
     self.workouts.collect do |workout|
-      minutes = workout.minutes
-      minutes
+      workout.minutes
     end.reduce(:+)
   end
 end
